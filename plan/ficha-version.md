@@ -1,11 +1,12 @@
 # Ficha de verificación de versión · Grupo 03
 
+Fecha: 17 de noviembre de 2026
 
 ## Fedora Workstation (VM gráfica: g03-grafica)
 
 | Pregunta | Respuesta | Enlace |
 |---|---|---|
-| Versión y fecha | Fedora Workstation 45, lanzada el 3 de noviembre de 2026 | https://fedoramagazine.org/ |
+| Versión y fecha | Fedora Workstation 45, lanzada el 3 de noviembre de 2026 | https://fedoraproject.org/workstation/ |
 | Actualizaciones de seguridad hasta | 24 de noviembre de 2027 (aprox. 13 meses por versión) | https://docs.fedoraproject.org/en-US/releases/lifecycle/ |
 | Requisitos y VirtualBox | Mínimo 2 GB de RAM y 20 GB de disco; se recomienda el doble. Funciona en VirtualBox 7 como VM x86_64 | https://fedoraproject.org/workstation/download |
 | Particionado manual | Sí: en el instalador web (Anaconda) con «Mount point assignment» o «Launch storage editor» en el menú ⋮ | https://anaconda-installer.readthedocs.io/en/latest/anaconda-webui/docs/installation-steps.html |
