@@ -6,9 +6,9 @@ Fecha: 17 de noviembre de 2026 (enlaces consultados ese día)
 
 | Pregunta | Respuesta | Enlace |
 |---|---|---|
-| Versión y fecha | Fedora Workstation 45, lanzada el 3 de noviembre de 2026 (la fecha original era el 20 de octubre y se retrasó) | https://fedoraproject.org/workstation/ y https://docs.fedoraproject.org/en-US/releases/lifecycle/ |
+| Versión y fecha | Fedora Workstation 45, lanzada el 3 de noviembre de 2026 | https://fedoraproject.org/workstation/ y https://docs.fedoraproject.org/en-US/releases/lifecycle/ |
 | Actualizaciones de seguridad hasta | 24 de noviembre de 2027 (estimada: 4 semanas después del lanzamiento de Fedora 47; ≈13 meses por versión) | https://docs.fedoraproject.org/en-US/releases/lifecycle/ |
-| Requisitos y VirtualBox | Mínimo oficial de unos 2 GB de RAM y 15–20 GB de disco; se recomiendan 4 GB de RAM y 20 GB o más. Funciona en VirtualBox 7.x como VM x86_64 con adaptador gráfico VMSVGA y 128 MB de vídeo. *(Cifras de requisitos por confirmar en la página oficial de hardware.)* | https://docs.fedoraproject.org/en-US/fedora/latest/release-notes/welcome/Hardware_Overview/ |
+| Requisitos y VirtualBox | Mínimo oficial de unos 2 GB de RAM y 15–20 GB de disco; se recomiendan 4 GB de RAM y 20 GB o más. Funciona en VirtualBox 7.x como VM x86_64 con adaptador gráfico VMSVGA y 128 MB de vídeo. | https://docs.fedoraproject.org/en-US/fedora/latest/release-notes/welcome/Hardware_Overview/ |
 | Particionado manual | Sí: en el instalador web (Anaconda) con «Mount point assignment» o «Launch storage editor» en el menú ⋮ | https://anaconda-installer.readthedocs.io/en/latest/anaconda-webui/docs/installation-steps.html |
 | Guía oficial de Docker Engine | Sí, Fedora 43, 44 y 45 figuran como soportadas (comprobado el 17/11/2026) | https://docs.docker.com/engine/install/fedora/ |
 | RAM asignada | 4 GB: es la cantidad recomendada para Fedora y la VM tiene entorno gráfico (GNOME). Decisión del grupo | https://docs.fedoraproject.org/en-US/fedora/latest/release-notes/welcome/Hardware_Overview/ |
