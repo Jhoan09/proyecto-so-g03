@@ -1,11 +1,10 @@
 # Plan de trabajo · Grupo 03
 
-| Integrante | Rol | Qué hace |
-|---|---|---|
-| Jhoan Mina | Coordinación y repositorio | Crea el repositorio, revisa que los commits cumplan, junta las páginas del sitio y entrega el enlace en el campus|
-| David Campiño | Máquinas virtuales y red | Instala las dos VMs con particionado manual, configura la red, SSH y las instantáneas |
-| Howard Lopez | Docker, scripts y sitio web | Escribe los dos scripts, el Dockerfile y el YAML de Kubernetes, y los videos |
-
+| Integrante | Rol | Qué hace | Archivos o carpeta propios |
+|---|---|---|---|
+| Jhoan Mina | Coordinación y repositorio | Crea el repositorio, revisa que los commits cumplan, junta las páginas del sitio y entrega el enlace en el campus | README.md, plan/ |
+| David Campiño | Máquinas virtuales y red; seguridad y usuarios | Instala las dos VMs con particionado manual, configura la red, SSH y las instantáneas; crea los usuarios, el grupo proyecto y el firewall | sprint-1.md, sprint-2.md, carpeta capturas-vm/ |
+| Howard Lopez | Scripts y procesos; Docker; sitio web y videos | Escribe los dos scripts, el Dockerfile y el YAML de Kubernetes, y los videos | scripts/, docker/, sprint-3.md |
 
 ## Fechas de los sprints
 
