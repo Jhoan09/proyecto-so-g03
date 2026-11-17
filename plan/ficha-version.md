@@ -1,6 +1,5 @@
 # Ficha de verificación de versión · Grupo 03
 
-Fecha de consulta: 17 de noviembre de 2026
 
 ## Fedora Workstation (VM gráfica: g03-grafica)
 
