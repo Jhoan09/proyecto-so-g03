@@ -10,7 +10,7 @@
 
 | Sprint | Cierre (Yumbo) | Qué entregamos |
 |---|---|---|
-| 0 · Arranque | Viernes 20 de noviembre, 11:55 p. m. | Repositorio público con la carpeta plan |
+| 0 · Arranque | Viernes 20 de noviembre, 11:50 p. m. | Repositorio público con la carpeta plan |
 | 1 · Montaje | Viernes 27 de noviembre,  11:55 p. m.  | Dos VMs, red, SSH e instantáneas |
 | 2 · Servicios | Viernes 11 de diciembre,  11:55 p. m.  | Usuarios, firewall, scripts, procesos y Docker |
 | 3 · Cierre | Viernes 18 de diciembre,  11:55 p. m.  | Imagen en Docker Hub, Kubernetes y sitio completo |
