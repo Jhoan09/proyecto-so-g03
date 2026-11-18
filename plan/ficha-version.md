@@ -12,6 +12,7 @@ Fecha: 17 de noviembre de 2026 (enlaces consultados ese día)
 | Particionado manual | Sí: en el instalador web (Anaconda) con «Mount point assignment» o «Launch storage editor» en el menú ⋮ | https://anaconda-installer.readthedocs.io/en/latest/anaconda-webui/docs/installation-steps.html |
 | Guía oficial de Docker Engine | Sí, Fedora 43, 44 y 45 figuran como soportadas (comprobado el 17/11/2026) | https://docs.docker.com/engine/install/fedora/ |
 | RAM asignada | 4 GB: es la cantidad recomendada para Fedora y la VM tiene entorno gráfico (GNOME). Decisión del grupo | https://docs.fedoraproject.org/en-US/fedora/latest/release-notes/welcome/Hardware_Overview/ |
+| Firewall por defecto | firewalld, que viene instalado y activo. Se consulta con sudo firewall-cmd --state y sudo firewall-cmd --list-all. | https://docs.fedoraproject.org/en-US/quick-docs/firewalld/ |
 
 ## Ubuntu Server (VM de consola: g03-consola)
 
@@ -23,6 +24,7 @@ Fecha: 17 de noviembre de 2026 (enlaces consultados ese día)
 | Particionado manual | Sí: opción «Custom storage layout» del instalador | https://documentation.ubuntu.com/server/ (buscar «storage» en la guía de instalación) |
 | Guía oficial de Docker Engine | Sí, Ubuntu 26.04 (LTS) figura en la lista de versiones soportadas | https://docs.docker.com/engine/install/ubuntu/ |
 | RAM asignada | 2 GB al instalar y 3 GB en el Sprint 3 para Kubernetes. Decisión del grupo, por encima del mínimo oficial de 1,5 GB | https://documentation.ubuntu.com/release-notes/26.04/ |
+| Firewall por defecto | ufw viene instalado pero desactivado. Se activa con sudo ufw enable y se consulta con sudo ufw status verbose. | https://ubuntu.com/server/docs/how-to/security/firewalls/ |
 
 ## Fedora (imagen base del Dockerfile)
 
