@@ -19,7 +19,7 @@ Pasos:
 
 ![Repositorio público con la carpeta plan](img/s0-01-repositorio.png)
 
-**Explicación:** Imagen del repositorio Creado
+*Figura 1: Se visualiza el repositorio creado.*
 
 ## 2. Plan de trabajo
 
@@ -43,7 +43,7 @@ Reglas del equipo: cada integrante trabaja solo en sus archivos, hace commits co
 
 ![Archivo plan-de-trabajo.md en el repositorio](img/s0-02-plan.png)
 
-**Explicación:** Imagen del plan en el repositorio
+*Figura 2: Se visualiza el plan que tenemos para realizar este proyecto con los roles de cada integrante*
 
 ## 3. Ficha de versión
 
@@ -59,7 +59,7 @@ La versión más reciente cumplió los puntos de la ficha en las tres distribuci
 
 ![Archivo ficha-version.md en el repositorio](img/s0-03-ficha.png)
 
-**Explicación:** Imagen de la Ficha-Version en el repositorio
+*Figura 3: Se visualiza la ficha de versión teniendo en base los componentes para nuestra VM.*
 
 ## 4. Publicación del sitio con GitHub Pages
 
@@ -67,7 +67,7 @@ La versión más reciente cumplió los puntos de la ficha en las tres distribuci
 
 ![Configuración de GitHub Pages](img/s0-04-pages.png)
 
-**Explicación:** Imagen la configuracion de GitHub Pages
+*Figura 4: Se visualiza la configuración de la pagina en GitHub Pages.*
 
 ## Lo que hizo cada integrante en este sprint
 
