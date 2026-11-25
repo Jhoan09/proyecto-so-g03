@@ -169,23 +169,23 @@ date
 
 ![Comando lsblk en la terminal](capturas-vm/lsblk2.png)
 
-*Figura 14. Comando lsblk ejecutado mediante la terminal.*
+*Figura 14. Comando `lsblk` ejecutado en la terminal de `g03-consola` con prompt y fecha.*
 
-![Comando df -h en la terminal](capturas-vm/df%-h2.png)
+![Comando df -h en la terminal](capturas-vm/df%20-h2.png)
 
-*Figura 15. Comando df -h ejecutado mediante la terminal.*
+*Figura 15. Comando `df -h` ejecutado en la terminal de `g03-consola` con prompt y fecha.*
 
-![Comando cat /etc/fstab en la terminal](capturas-vm/cat%etc%fstab2.png)
+![Comando cat /etc/fstab en la terminal](capturas-vm/cat%20etc%20fstab2.png)
 
-*Figura 15. Comando cat /etc/fstab ejecutado mediante la terminal.*
+*Figura 16. Comando `cat /etc/fstab` ejecutado en la terminal de `g03-consola` con prompt y fecha.*
 
-![Las cuatro herramientas mostrando su versión](capturas-vm/make%rsync%curl%git.png)
+![Versiones de make, rsync, curl y git](capturas-vm/make%20rsync%20curl%20git.png)
 
-*Figura 16. Comprobación de la instalación de `make`, `rsync`, `curl` y `git`  mediante sus respectivos comandos de versión.*
+*Figura 17. Comprobación de `make`, `rsync`, `curl` y `git` mediante sus comandos de versión.*
 
-![Comando wget --version mostrando su respectiva version](capturas-vm/wget.png)
+![Versión de wget](capturas-vm/wget.png)
 
-*Figura 17. Comprobación de la instalación de `wget` mediante su respectivo comando de versión.*
+*Figura 18. Comprobación de la instalación de `wget` mediante `wget --version`.*
 
 ---
 
