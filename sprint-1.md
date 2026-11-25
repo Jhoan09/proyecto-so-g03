@@ -16,20 +16,14 @@ Instalamos Fedora Workstation 45 con particionado manual: `/`, swap y `/home`. N
 | swap | 2 GB | Apoya la memoria en picos de carga o suspensión sin gastar demasiado espacio del disco de 25 GB. |
 | /home | 12,8 GB | Guarda archivos de usuario, configuraciones y repositorios/proyectos locales de forma separada. |
 
-Dos navegadores y dos editores instalados:
-| Navegador | Editor |
-| :--- | :--- |
-| Brave | Visual Studio |
-| Chrome | Zed |
-
-
-Comandos: `lsblk`, `df -h`, `cat /etc/fstab`, `date`
 
 ![Confirmación del método de instalación de Fedora Linux Workstation 45](capturas-vm/almacenamiento_final.png)  
 *Figura 1: Se visualiza la confirmación del método de instalación de Fedora Linux Workstation 45, con el respectivo almacenamiento configurado.*
 
 ![Último paso de la instalación](capturas-vm/instalacion_final.png)  
 *Figura 2: Se visualiza el último paso de la instalación.*
+
+Comandos: `lsblk`, `df -h`, `cat /etc/fstab`, `date`
 
 ![Comando lsblk ejecutado en g03-grafica](capturas-vm/lsblk.png)  
 *Figura 3: Se visualiza la terminal con el comando `lsblk` ejecutado.*
@@ -42,6 +36,12 @@ Comandos: `lsblk`, `df -h`, `cat /etc/fstab`, `date`
 
 ![Comando date ejecutado](capturas-vm/date.png)  
 *Figura 6: Se visualiza la terminal con el comando `date` ejecutado.*
+
+Dos navegadores y dos editores instalados:
+| Navegador | Editor |
+| :--- | :--- |
+| Brave | Visual Studio |
+| Chrome | Zed |
 
 ![Instalación de Brave Origin por terminal](capturas-vm/instalacion_braveorigin.png)  
 *Figura 7: Se visualiza la instalación de Brave Origin mediante la terminal.*
