@@ -129,12 +129,10 @@ Se realizó la instalación de **Ubuntu Server 26.04 LTS**, utilizando particion
 
 | Partición | Tamaño | Justificación |
 |:---|---:|:---|
-| `/` | [COMPLETAR] | Aloja Ubuntu Server, sus componentes principales y las herramientas necesarias para la administración del sistema. |
-| `/var` | [COMPLETAR] | Almacena registros, cachés y datos variables generados durante el funcionamiento del sistema. |
-| `swap` | [COMPLETAR] | Proporciona memoria de intercambio como apoyo a los 2 GB de RAM asignados a la máquina virtual. |
-| `/home` | [COMPLETAR] | Almacena los archivos personales, configuraciones y proyectos del usuario principal. |
-
-*Nota: Completar los tamaños con los valores reales de la instalación. Si se utilizó arranque UEFI, documentar también la partición EFI y su tamaño.*
+| `/` | 5 GB | Aloja Ubuntu Server, sus componentes principales y las herramientas necesarias para la administración del sistema. |
+| `/var` | 10 GB | Almacena registros, cachés y datos variables generados durante el funcionamiento del sistema. |
+| `swap` | 1 GB | Proporciona memoria de intercambio como apoyo a los 2 GB de RAM asignados a la máquina virtual. |
+| `/home` | 1 GB | Almacena los archivos personales, configuraciones y proyectos del usuario principal. |
 
 ### 2.3. Herramientas instaladas
 
@@ -169,13 +167,25 @@ date
 
 ### 2.5. Evidencias gráficas
 
-![lsblk, df -h y cat /etc/fstab en g03-consola](capturas-vm/s1-04-consola-lsblk.png)
+![Comando lsblk en la terminal](capturas-vm/lsblk2.png)
 
-*Figura 14. Verificación de la estructura de almacenamiento de `g03-consola` mediante `lsblk`, `df -h` y `cat /etc/fstab`. Se muestran las particiones, el espacio disponible y la configuración de montaje.*
+*Figura 14. Comando lsblk ejecutado mediante la terminal.*
 
-![Las cinco herramientas mostrando su versión](capturas-vm/s1-05-consola-herramientas.png)
+![Comando df -h en la terminal](capturas-vm/df%-h2.png)
 
-*Figura 15. Comprobación de la instalación de `make`, `rsync`, `curl`, `git` y `wget` mediante sus respectivos comandos de versión.*
+*Figura 15. Comando df -h ejecutado mediante la terminal.*
+
+![Comando cat /etc/fstab en la terminal](capturas-vm/cat%etc%fstab2.png)
+
+*Figura 15. Comando cat /etc/fstab ejecutado mediante la terminal.*
+
+![Las cuatro herramientas mostrando su versión](capturas-vm/make%rsync%curl%git.png)
+
+*Figura 16. Comprobación de la instalación de `make`, `rsync`, `curl` y `git`  mediante sus respectivos comandos de versión.*
+
+![Comando wget --version mostrando su respectiva version](capturas-vm/wget.png)
+
+*Figura 17. Comprobación de la instalación de `wget` mediante su respectivo comando de versión.*
 
 ---
 
