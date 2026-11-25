@@ -1,41 +1,53 @@
-# Sprint 1 · Montaje
+# Sprint 1 · Montaje de infraestructura
 
 [← Volver al inicio](./)
 
-> **Alcance del Sprint 1 (5 puntos):** Montaje de **VM gráfica (`g03-grafica`)**, **VM de consola (`g03-consola`)**, configuración de **red**, **acceso SSH** e **instantáneas limpias**.  
-> **Entrega en el campus:** Enlace de este sitio.  
-> **Requisitos adicionales:** Video continuo de **3 minutos** al final de esta página, **mínimo 2 commits por integrante** y el archivo `codigo_sprint1.txt` en el `$HOME` del usuario principal de ambas máquinas virtuales.
+> **Alcance del Sprint 1 (5 puntos):** Instalación y configuración de dos máquinas virtuales: una gráfica (`g03-grafica`) y otra de consola (`g03-consola`). Se incluyen la configuración de red, conectividad entre máquinas, acceso remoto mediante SSH e instantáneas del estado inicial.
+
+> **Entrega en el campus:** Enlace de este sitio web.
+>
+> **Requisitos adicionales:**
+> - Video continuo de 3 minutos al final de esta página.
+> - Mínimo 2 commits por integrante.
+> - Archivo `codigo_sprint1.txt` ubicado en el `$HOME` del usuario principal de ambas máquinas virtuales.
 
 ---
 
-## 1. VM gráfica (`g03-grafica`)
+## 1. Máquina virtual gráfica (`g03-grafica`)
 
-Instalación de **Fedora Workstation 45** con particionado manual (`/`, `swap` y `/home`), sin utilizar la opción de borrar todo el disco.
+Se realizó la instalación de **Fedora Workstation 45**, utilizando particionado manual del disco para separar el sistema operativo, la memoria de intercambio y los archivos personales del usuario.
 
-### Especificaciones de hardware
+### 1.1. Especificaciones de hardware
+
 | Recurso | Asignación |
-| :--- | :--- |
-| **Sistema operativo** | Fedora Workstation 45 |
-| **Disco** | 26,8 GB |
-| **CPU** | 3 vCPU |
-| **RAM** | 8 GB |
+|:---|:---|
+| Sistema operativo | Fedora Workstation 45 |
+| Disco virtual | 26,8 GB |
+| CPU | 3 vCPU |
+| Memoria RAM | 8 GB |
 
-### Esquema de particionado
+### 1.2. Esquema de particionado
+
 | Partición | Tamaño | Justificación |
-| :--- | :--- | :--- |
-| `/` | 12 GB | Alberga Fedora Workstation 45, el entorno gráfico y los paquetes/herramientas instaladas con holgura. |
-| `swap` | 2 GB | Apoya la memoria en picos de carga o suspensión sin consumir demasiado espacio del disco. |
-| `/home` | 12,8 GB | Separa los archivos de usuario, configuraciones y repositorios/proyectos locales del sistema base. |
+|:---|---:|:---|
+| `/` | 12 GB | Contiene el sistema operativo, el entorno gráfico y las aplicaciones instaladas. |
+| `swap` | 2 GB | Proporciona memoria de intercambio para apoyar al sistema durante picos de consumo de RAM. |
+| `/home` | 12,8 GB | Almacena los archivos personales, configuraciones del usuario y proyectos de desarrollo. |
 
-### Evidencias gráficas
+### 1.3. Evidencias de instalación
 
-![Confirmación del método de instalación de Fedora Linux Workstation 45](capturas-vm/almacenamiento_final.png)  
-*Figura 1: Confirmación del método de instalación de Fedora Linux Workstation 45 con el almacenamiento configurado.*
+![Confirmación del método de instalación de Fedora Linux Workstation 45](capturas-vm/almacenamiento_final.png)
 
-![Último paso de la instalación](capturas-vm/instalacion_final.png)  
-*Figura 2: Último paso de la instalación de Fedora Workstation 45.*
+*Figura 1. Configuración final del almacenamiento y confirmación del particionado manual de Fedora Workstation 45.*
 
-### Comandos de verificación
+![Último paso de la instalación](capturas-vm/instalacion_final.png)
+
+*Figura 2. Pantalla final del proceso de instalación de Fedora Workstation 45.*
+
+### 1.4. Verificación del almacenamiento y sistema
+
+Se ejecutaron los siguientes comandos para comprobar la distribución de las particiones, el espacio disponible, los puntos de montaje y la fecha del sistema.
+
 ```bash
 lsblk
 df -h
@@ -43,183 +55,330 @@ cat /etc/fstab
 date
 ```
 
-![Comando lsblk ejecutado en g03-grafica](capturas-vm/lsblk.png)  
-*Figura 3: Terminal con la salida del comando `lsblk` en `g03-grafica`.*
+![Comando lsblk ejecutado en g03-grafica](capturas-vm/lsblk.png)
 
-![Comando cat /etc/fstab ejecutado](capturas-vm/cat%20etcfstab.png)  
-*Figura 4: Terminal con la salida del comando `cat /etc/fstab`.*
+*Figura 3. Salida de `lsblk`, donde se identifican los dispositivos de almacenamiento, sus particiones y los puntos de montaje.*
 
-![Comando df -h ejecutado](capturas-vm/df%20-h.png)  
-*Figura 5: Terminal con la salida del comando `df -h`.*
+![Comando cat /etc/fstab ejecutado](capturas-vm/cat%20etcfstab.png)
 
-![Comando date ejecutado](capturas-vm/date.png)  
-*Figura 6: Terminal con la salida del comando `date`.*
+*Figura 4. Contenido de `/etc/fstab`, utilizado para verificar la configuración de montaje de los sistemas de archivos.*
 
-### Software instalado
-| Navegadores | Editores |
-| :--- | :--- |
-| Brave | Visual Studio |
-| Chrome | Zed |
+![Comando df -h ejecutado](capturas-vm/df%20-h.png)
 
-![Instalación de Brave Origin por terminal](capturas-vm/instalacion_braveorigin.png)  
-*Figura 7: Instalación de Brave Origin mediante terminal.*
+*Figura 5. Salida de `df -h`, que permite comprobar la capacidad total, el espacio utilizado y el espacio disponible en los sistemas de archivos.*
 
-![Continuación de la instalación de Brave Origin](capturas-vm/instalacion_braveorigin_2.png)  
-*Figura 7.1: Continuación y cierre del comando de instalación para Brave Origin.*
+![Comando date ejecutado](capturas-vm/date.png)
 
-![Instalación de Google Chrome por terminal](capturas-vm/instalacion_chrome.png)  
-*Figura 8: Instalación de Google Chrome mediante terminal.*
+*Figura 6. Verificación de la fecha y hora configuradas en la máquina virtual.*
 
-![Ambos navegadores abiertos en la VM](capturas-vm/navegadores%20abiertos.png)  
-*Figura 9: Evidencia de navegadores abiertos en `g03-grafica`.*
+### 1.5. Software instalado
+
+Se instalaron navegadores web y editores de texto para disponer de herramientas de navegación, edición y administración del sistema.
+
+| Categoría | Software |
+|:---|:---|
+| Navegadores | Brave y Google Chrome |
+| Editores de texto | Gedit y Vim |
+
+![Instalación de Brave mediante terminal](capturas-vm/instalacion_braveorigin.png)
+
+*Figura 7. Proceso de instalación del navegador Brave mediante la terminal.*
+
+![Continuación de la instalación de Brave](capturas-vm/instalacion_braveorigin_2.png)
+
+*Figura 8. Continuación y finalización del proceso de instalación de Brave.*
+
+![Instalación de Google Chrome por terminal](capturas-vm/instalacion_chrome.png)
+
+*Figura 9. Instalación de Google Chrome mediante la terminal.*
+
+![Ambos navegadores abiertos en la VM](capturas-vm/navegadores%20abiertos.png)
+
+*Figura 10. Verificación visual de los navegadores Brave y Google Chrome ejecutándose en `g03-grafica`.*
+
+![Instalación de Gedit por terminal](capturas-vm/instalacion_gedit.png)
+
+*Figura 11. Instalación del editor de texto Gedit mediante la terminal.*
+
+![Instalación de Vim por terminal](capturas-vm/instalacion_vim.png)
+
+*Figura 12. Instalación del editor de texto Vim mediante la terminal.*
+
+![Ambos editores abiertos en la VM](capturas-vm/editores%20abiertos.png)
+
+*Figura 13. Verificación de Gedit y Vim ejecutándose correctamente en la máquina virtual gráfica.*
 
 ---
 
-## 2. VM de consola (`g03-consola`)
+## 2. Máquina virtual de consola (`g03-consola`)
 
-Instalación de **Ubuntu Server 26.04 LTS** con particionado manual (`/`, `/var`, `swap` y `/home`).
+Se realizó la instalación de **Ubuntu Server 26.04 LTS**, utilizando particionado manual para separar el sistema de archivos raíz, los datos variables del sistema, la memoria de intercambio y los archivos personales del usuario.
 
-### Especificaciones de hardware
-* **Disco:** 25 GB
-* **CPU:** 2 vCPU
-* **RAM:** 2 GB *(se ampliará a 3 GB en el Sprint 3 para Kubernetes)*
+### 2.1. Especificaciones de hardware
 
-### Esquema de particionado
+| Recurso | Asignación |
+|:---|:---|
+| Sistema operativo | Ubuntu Server 26.04 LTS |
+| Disco virtual | 25 GB |
+| CPU | 2 vCPU |
+| Memoria RAM | 2 GB |
+
+*Nota: La memoria RAM se ampliará a 3 GB durante el Sprint 3, según los requerimientos previstos para Kubernetes.*
+
+### 2.2. Esquema de particionado
+
 | Partición | Tamaño | Justificación |
-| :--- | :--- | :--- |
-| `/` | `[COMPLETAR]` | `[COMPLETAR: una frase]` |
-| `/var` | `[COMPLETAR]` | `[COMPLETAR: una frase]` |
-| `swap` | `[COMPLETAR]` | `[COMPLETAR: una frase]` |
-| `/home` | `[COMPLETAR]` | `[COMPLETAR: una frase]` |
+|:---|---:|:---|
+| `/` | [COMPLETAR] | Aloja Ubuntu Server, sus componentes principales y las herramientas necesarias para la administración del sistema. |
+| `/var` | [COMPLETAR] | Almacena registros, cachés y datos variables generados durante el funcionamiento del sistema. |
+| `swap` | [COMPLETAR] | Proporciona memoria de intercambio como apoyo a los 2 GB de RAM asignados a la máquina virtual. |
+| `/home` | [COMPLETAR] | Almacena los archivos personales, configuraciones y proyectos del usuario principal. |
 
-### Herramientas instaladas
-`make`, `rsync`, `curl`, `git` y `wget`.
+*Nota: Completar los tamaños con los valores reales de la instalación. Si se utilizó arranque UEFI, documentar también la partición EFI y su tamaño.*
 
-### Comandos de verificación
+### 2.3. Herramientas instaladas
+
+Se instalaron las herramientas necesarias para la administración del sistema, transferencia de archivos, descarga de recursos, control de versiones y automatización de tareas.
+
+| Herramienta | Función |
+|:---|:---|
+| `make` | Automatización de tareas mediante archivos Makefile. |
+| `rsync` | Sincronización y transferencia eficiente de archivos. |
+| `curl` | Transferencia de datos y consulta de recursos mediante URL. |
+| `git` | Control de versiones y gestión del repositorio del proyecto. |
+| `wget` | Descarga de archivos desde servidores remotos. |
+
+### 2.4. Comandos de instalación y verificación
+
 ```bash
-lsblk
-df -h
-cat /etc/fstab
 sudo apt update
+
 sudo apt install -y make rsync curl git wget
+
 make --version
 rsync --version
 curl --version
 git --version
 wget --version
+
+lsblk
+df -h
+cat /etc/fstab
 date
 ```
 
-### Evidencias gráficas
+### 2.5. Evidencias gráficas
 
-![lsblk, df -h y cat /etc/fstab en g03-consola, con prompt y fecha](capturas-vm/s1-04-consola-lsblk.png)  
-*Figura 10: Salida de `lsblk`, `df -h` y `cat /etc/fstab` en `g03-consola` con prompt y fecha.*
+![lsblk, df -h y cat /etc/fstab en g03-consola](capturas-vm/s1-04-consola-lsblk.png)
 
-> `[COMPLETAR: qué muestra la captura]`
+*Figura 14. Verificación de la estructura de almacenamiento de `g03-consola` mediante `lsblk`, `df -h` y `cat /etc/fstab`. Se muestran las particiones, el espacio disponible y la configuración de montaje.*
 
-![Las cinco herramientas mostrando su versión](capturas-vm/s1-05-consola-herramientas.png)  
-*Figura 11: Verificación de versiones de `make`, `rsync`, `curl`, `git` y `wget`.*
+![Las cinco herramientas mostrando su versión](capturas-vm/s1-05-consola-herramientas.png)
 
-> `[COMPLETAR: qué muestra la captura]`
+*Figura 15. Comprobación de la instalación de `make`, `rsync`, `curl`, `git` y `wget` mediante sus respectivos comandos de versión.*
 
 ---
 
-## 3. Red
+## 3. Configuración de red y conectividad
 
-Cada máquina virtual cuenta con dos adaptadores de red:
-* **Adaptador 1:** **NAT** (acceso a internet).
-* **Adaptador 2:** **Red solo-anfitrión** (comunicación directa entre `g03-grafica` y `g03-consola`).
+Se configuraron dos adaptadores de red en cada máquina virtual para proporcionar acceso a internet y comunicación directa entre ambas máquinas.
 
-> `[COMPLETAR: qué direcciones IP tomó cada interfaz y si hubo que configurar algo a mano]`
+### 3.1. Configuración de los adaptadores
 
-### Comandos de prueba
+| Adaptador | Modo de conexión | Función |
+|:---|:---|:---|
+| Adaptador 1 | NAT | Proporciona acceso a internet mediante la conexión del anfitrión. |
+| Adaptador 2 | Red solo-anfitrión (Host-Only) | Permite la comunicación directa entre `g03-grafica` y `g03-consola`. |
+
+### 3.2. Direccionamiento IP
+
+Las direcciones IP se verificaron mediante el comando `ip a`, identificando las interfaces correspondientes a cada adaptador.
+
+| Máquina virtual | Interfaz NAT | IP NAT | Interfaz Host-Only | IP Host-Only |
+|:---|:---|:---|:---|:---|
+| `g03-grafica` | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
+| `g03-consola` | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
+
+**Configuración adicional:** [Indicar si las direcciones IP se asignaron automáticamente mediante DHCP o si fue necesario configurar alguna interfaz manualmente.]
+
+### 3.3. Comandos de verificación
+
 ```bash
 ip a
-ping -c 4 <IP-DE-LA-OTRA-VM>
 ```
 
-### Evidencias gráficas
+Para comprobar la conectividad entre las máquinas virtuales se ejecutó:
 
-![ip a en las dos VMs, mostrando una dirección en cada interfaz](capturas-vm/s1-06-ip-a.png)  
-*Figura 12: Salida de `ip a` en ambas VMs mostrando las direcciones asignadas en cada interfaz.*
-
-> `[COMPLETAR: qué muestra la captura]`
-
-![ping de la gráfica a la consola y de la consola a la gráfica](capturas-vm/s1-07-ping.png)  
-*Figura 13: Pruebas de conectividad `ping` bidireccional entre `g03-grafica` y `g03-consola`.*
-
-> `[COMPLETAR: qué muestra la captura]`
-
----
-
-## 4. SSH
-
-Acceso remoto por **SSH** desde la VM gráfica (`g03-grafica`) hacia la VM de consola (`g03-consola`).
-
-> `[COMPLETAR: usuario y dirección IP utilizados]`
-
-### Comando de conexión
 ```bash
-ssh usuario@direccion-de-la-consola
+ping -c 4 <IP-HOST-ONLY-DE-LA-OTRA-VM>
 ```
 
-### Evidencia gráfica
+### 3.4. Evidencias gráficas
 
-![Sesión SSH abierta, con el prompt de la consola](capturas-vm/s1-08-ssh.png)  
-*Figura 14: Sesión SSH activa conectada desde `g03-grafica` hacia `g03-consola`.*
+![ip a en las dos VMs](capturas-vm/s1-06-ip-a.png)
 
-> `[COMPLETAR: qué muestra la captura]`
+*Figura 16. Salida del comando `ip a` en ambas máquinas virtuales. Se identifican las interfaces de red y las direcciones IP asignadas a los adaptadores NAT y Host-Only.*
 
----
+**Descripción de la evidencia:** La captura permite verificar el direccionamiento IP de las dos máquinas virtuales y distinguir las interfaces destinadas al acceso a internet y a la comunicación interna.
 
-## 5. Instantáneas
+![Ping de la gráfica a la consola y de la consola a la gráfica](capturas-vm/s1-07-ping.png)
 
-Se creó una instantánea denominada `instalacion-limpia` en cada máquina virtual una vez finalizada la instalación y con la VM apagada.
+*Figura 17. Pruebas de conectividad mediante `ping` en ambos sentidos: desde `g03-grafica` hacia `g03-consola` y desde `g03-consola` hacia `g03-grafica`.*
 
-![Pestaña de instantáneas de g03-grafica](capturas-vm/s1-09-instantanea-grafica.png)  
-*Figura 15: Instantánea `instalacion-limpia` registrada en `g03-grafica`.*
-
-> `[COMPLETAR: qué muestra la captura]`
-
-![Pestaña de instantáneas de g03-consola](capturas-vm/s1-10-instantanea-consola.png)  
-*Figura 16: Instantánea `instalacion-limpia` registrada en `g03-consola`.*
-
-> `[COMPLETAR: qué muestra la captura]`
+**Descripción de la evidencia:** Se comprueba la comunicación bidireccional entre las máquinas virtuales mediante el envío y la recepción de paquetes ICMP, verificando que ambas pueden comunicarse a través de la red Host-Only.
 
 ---
 
-## Código del sprint
+## 4. Acceso remoto mediante SSH
 
-El código publicado por el docente en el campus (48 horas antes del cierre) se almacenó en el directorio `home` del usuario principal de ambas máquinas virtuales y se muestra en el video de evidencia.
+Se configuró el servicio SSH para permitir el acceso remoto desde la máquina virtual gráfica (`g03-grafica`) hacia la máquina virtual de consola (`g03-consola`).
+
+La conexión se realizó utilizando el usuario principal de Ubuntu Server y la dirección IP correspondiente a la interfaz Host-Only.
+
+### 4.1. Datos de conexión
+
+| Parámetro | Valor |
+|:---|:---|
+| Máquina de origen | `g03-grafica` |
+| Máquina de destino | `g03-consola` |
+| Usuario remoto | [COMPLETAR] |
+| Dirección IP de destino | [COMPLETAR] |
+| Puerto SSH | 22 |
+
+### 4.2. Comando de conexión
 
 ```bash
-echo "CÓDIGO" > codigo_sprint1.txt
-cat codigo_sprint1.txt
+ssh usuario@direccion-ip-de-la-consola
+```
+
+### 4.3. Evidencia gráfica
+
+![Sesión SSH abierta, con el prompt de la consola](capturas-vm/s1-08-ssh.png)
+
+*Figura 18. Sesión SSH establecida desde `g03-grafica` hacia `g03-consola`, mostrando el acceso remoto y el prompt del usuario de Ubuntu Server.*
+
+**Descripción de la evidencia:** Se demuestra que la máquina gráfica puede acceder remotamente a la máquina de consola mediante SSH, utilizando la conectividad proporcionada por el adaptador Host-Only.
+
+---
+
+## 5. Instantáneas de las máquinas virtuales
+
+Una vez finalizadas las instalaciones y configuraciones iniciales, se crearon instantáneas para conservar un estado limpio de cada máquina virtual.
+
+Las instantáneas se registraron con el nombre `instalacion-limpia` y se realizaron con las respectivas máquinas virtuales apagadas.
+
+### 5.1. Instantánea de la máquina gráfica
+
+![Pestaña de instantáneas de g03-grafica](capturas-vm/s1-09-instantanea-grafica.png)
+
+*Figura 19. Instantánea `instalacion-limpia` registrada para la máquina virtual `g03-grafica`.*
+
+**Descripción de la evidencia:** Se verifica la existencia de la instantánea que permite conservar el estado inicial de Fedora Workstation 45.
+
+### 5.2. Instantánea de la máquina de consola
+
+![Pestaña de instantáneas de g03-consola](capturas-vm/s1-10-instantanea-consola.png)
+
+*Figura 20. Instantánea `instalacion-limpia` registrada para la máquina virtual `g03-consola`.*
+
+**Descripción de la evidencia:** Se comprueba que Ubuntu Server cuenta con una instantánea de su estado inicial, permitiendo recuperar la máquina virtual en caso de errores durante los siguientes sprints.
+
+---
+
+## 6. Código de identificación del sprint
+
+El código publicado por el docente en el campus virtual, 48 horas antes del cierre de la entrega, se almacenó en el directorio personal (`$HOME`) del usuario principal de ambas máquinas virtuales.
+
+Para registrar y verificar el código se utilizaron los siguientes comandos:
+
+```bash
+echo "CODIGO_PUBLICADO_POR_EL_DOCENTE" > ~/codigo_sprint1.txt
+
+cat ~/codigo_sprint1.txt
+
 date
 ```
 
----
+Se verificó la existencia del archivo en ambas máquinas virtuales:
 
-## Video del sprint (3 minutos)
+```bash
+ls -l ~/codigo_sprint1.txt
+```
 
-Grabación continua y sin cortes. En los primeros **10 segundos** cada integrante indica su nombre, qué realizó en el sprint y muestra su rostro mientras expone su parte.
+**Ubicación requerida:** `/home/usuario/codigo_sprint1.txt`.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ID_DEL_VIDEO" title="Sprint 1 - Montaje" frameborder="0" allowfullscreen></iframe>
-
----
-
-## Lo que hizo cada integrante en este sprint
-
-| Integrante | Aportes en el sprint | Commits |
-| :--- | :--- | :--- |
-| **Jhoan Mina** | `[COMPLETAR]` | `[COMPLETAR]` |
-| **David Campiño** | `[COMPLETAR]` | `[COMPLETAR]` |
-| **Howard López** | `[COMPLETAR]` | `[COMPLETAR]` |
+*Nota: El código debe reemplazarse por el valor real publicado por el docente. Su presencia y contenido deben mostrarse en el video de evidencia.*
 
 ---
 
-## Errores encontrados y fuentes consultadas
+## 7. Video de evidencia del Sprint 1
 
-| Error | Causa probable | Solución | Fuente (título, enlace y fecha de consulta) |
-| :--- | :--- | :--- | :--- |
-| `[COMPLETAR]` | `[COMPLETAR]` | `[COMPLETAR]` | `[COMPLETAR]` |
+Se presenta un video continuo de **3 minutos**, sin cortes ni ediciones, en el que se demuestra el trabajo realizado durante el Sprint 1.
+
+Durante los primeros 10 segundos, cada integrante debe indicar su nombre, explicar brevemente su participación en el sprint y mostrar su rostro mientras presenta su parte.
+
+El video debe evidenciar:
+
+1. Las características y configuración de `g03-grafica`.
+2. Las características y configuración de `g03-consola`.
+3. La estructura de particiones de ambas máquinas.
+4. Las herramientas instaladas y sus respectivas verificaciones.
+5. La configuración de red y las pruebas de conectividad.
+6. El acceso remoto mediante SSH.
+7. Las instantáneas `instalacion-limpia`.
+8. El archivo `codigo_sprint1.txt` en el `$HOME` de ambas máquinas.
+
+### Reproducción del video
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ID_DEL_VIDEO" title="Sprint 1 - Montaje de infraestructura" frameborder="0" allowfullscreen></iframe>
+
+**Enlace del video:** [COMPLETAR CON EL ENLACE DE YOUTUBE]
+
+---
+
+## 8. Distribución del trabajo y commits
+
+Se documenta la participación de cada integrante en las actividades desarrolladas durante el Sprint 1.
+
+| Integrante | Aportes realizados | Commits |
+|:---|:---|:---|
+| **Jhoan Mina** | [COMPLETAR] | [COMPLETAR: mínimo 2] |
+| **David Campiño** | [COMPLETAR] | [COMPLETAR: mínimo 2] |
+| **Howard López** | [COMPLETAR] | [COMPLETAR: mínimo 2] |
+
+**Importante:** Cada integrante debe contar con al menos dos commits identificables en el historial del repositorio. Se recomienda registrar los identificadores o enlaces de los commits para facilitar su verificación.
+
+---
+
+## 9. Errores encontrados y fuentes consultadas
+
+Durante el montaje se deben registrar los inconvenientes técnicos que se presentaron, sus posibles causas, las soluciones implementadas y las fuentes utilizadas para resolverlos.
+
+| Error encontrado | Causa probable | Solución implementada | Fuente consultada |
+|:---|:---|:---|:---|
+| [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [Título, enlace y fecha de consulta] |
+
+*Si no se presentaron errores, se puede indicar expresamente que no se registraron inconvenientes durante el proceso de instalación y configuración.*
+
+---
+
+## 10. Verificación final de requisitos
+
+| Requisito | Estado |
+|:---|:---|
+| Instalación de Fedora Workstation 45 | [COMPLETAR] |
+| Instalación de Ubuntu Server 26.04 LTS | [COMPLETAR] |
+| Particionado manual de ambas máquinas | [COMPLETAR] |
+| Instalación y verificación de herramientas | [COMPLETAR] |
+| Configuración de adaptadores NAT y Host-Only | [COMPLETAR] |
+| Conectividad bidireccional mediante ping | [COMPLETAR] |
+| Acceso remoto mediante SSH | [COMPLETAR] |
+| Instantánea `instalacion-limpia` en ambas máquinas | [COMPLETAR] |
+| Archivo `codigo_sprint1.txt` en ambos `$HOME` | [COMPLETAR] |
+| Mínimo 2 commits por integrante | [COMPLETAR] |
+| Video continuo de 3 minutos | [COMPLETAR] |
+
+---
+
+**Fin del Sprint 1 · Montaje de infraestructura**
+
