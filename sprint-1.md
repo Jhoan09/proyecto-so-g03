@@ -353,7 +353,7 @@ Se documenta la participación de cada integrante en las actividades desarrollad
 
 | Integrante | Aportes realizados | Commits |
 |:---|:---|:---|
-| **Jhoan Mina** | [COMPLETAR] | [COMPLETAR: mínimo 2] |
+| **Jhoan Mina** | Me encargue de realizar la pagina junto y el diseño de esta misma basándome en la presentada como ejemplo del profesor y estructurándola adecuadamente con todos los requisitos que pedía el sprint 1 para que mis compañeros pudieran seguirla y guiarse en la elaboración de las MV, junto con otras pequeñas correcciones en la estructura | 22 |
 | **David Campiño** | [COMPLETAR] | [COMPLETAR: mínimo 2] |
 | **Howard López** | [COMPLETAR] | [COMPLETAR: mínimo 2] |
 
