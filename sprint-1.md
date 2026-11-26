@@ -303,11 +303,7 @@ El código publicado por el docente en el campus virtual, 48 horas antes del cie
 Para registrar y verificar el código se utilizaron los siguientes comandos:
 
 ```bash
-echo "CODIGO_PUBLICADO_POR_EL_DOCENTE" > ~/codigo_sprint1.txt
-
-cat ~/codigo_sprint1.txt
-
-date
+echo "XX00-AB12" > codigo_sprint1.txt && cat codigo_sprint1.txt && date
 ```
 
 Se verificó la existencia del archivo en ambas máquinas virtuales:
@@ -317,8 +313,6 @@ ls -l ~/codigo_sprint1.txt
 ```
 
 **Ubicación requerida:** `/home/usuario/codigo_sprint1.txt`.
-
-*Nota: El código debe reemplazarse por el valor real publicado por el docente. Su presencia y contenido deben mostrarse en el video de evidencia.*
 
 ---
 
@@ -354,7 +348,7 @@ Se documenta la participación de cada integrante en las actividades desarrollad
 | Integrante | Aportes realizados | Commits |
 |:---|:---|:---|
 | **Jhoan Mina** | Me encargue de realizar la pagina junto y el diseño de esta misma basándome en la presentada como ejemplo del profesor y estructurándola adecuadamente con todos los requisitos que pedía el sprint 1 para que mis compañeros pudieran seguirla y guiarse en la elaboración de las MV, junto con otras pequeñas correcciones en la estructura | 22 |
-| **David Campiño** | [COMPLETAR] | [COMPLETAR: mínimo 2] |
+| **David Campiño** | Realicé la configuración y documentación de la VM gráfica (g07-grafica), la VM de consola (g03-consola) con particionado manual (/ de 5 GB, /var de 10 GB, swap de 1 GB y /home de 1 GB) e instalación de make, rsync, curl, git y wget, la configuración de red (adaptadores NAT y Host-Only, verificación con ip a y ping en ambos sentidos), la conexión SSH desde la VM gráfica hacia la VM de consola, la creación de las instantáneas instalacion-limpia con las VMs apagadas y el registro del código del sprint. | 15 |
 | **Howard López** | [COMPLETAR] | [COMPLETAR: mínimo 2] |
 
 **Importante:** Cada integrante debe contar con al menos dos commits identificables en el historial del repositorio. Se recomienda registrar los identificadores o enlaces de los commits para facilitar su verificación.
@@ -367,9 +361,8 @@ Durante el montaje se deben registrar los inconvenientes técnicos que se presen
 
 | Error encontrado | Causa probable | Solución implementada | Fuente consultada |
 |:---|:---|:---|:---|
-| [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [Título, enlace y fecha de consulta] |
+| Instalación desatendida de Ubuntu Server sin el particionado manual requerido (`/`, `/var`, `swap` y `/home`) | Seguir el flujo desatendido de la guía del docente sin desactivar la instalación desatendida ni elegir el esquema de almacenamiento personalizado (`Custom storage layout`) exigido por el proyecto | Se desactivó la instalación desatendida, se ingresó al particionado manual del disco y se creó el esquema requerido (`/`, `/var`, `swap` y `/home`) con apoyo de Gemini paso a paso para comprender cada configuración y dejar el sistema funcional | Asistencia interactiva con Gemini (sesión de configuración del proyecto, noviembre de 2026) |
 
-*Si no se presentaron errores, se puede indicar expresamente que no se registraron inconvenientes durante el proceso de instalación y configuración.*
 
 ---
 
