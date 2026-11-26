@@ -206,10 +206,9 @@ Las direcciones IP se verificaron mediante el comando `ip a`, identificando las 
 
 | Máquina virtual | Interfaz NAT | IP NAT | Interfaz Host-Only | IP Host-Only |
 |:---|:---|:---|:---|:---|
-| `g03-grafica` | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
-| `g03-consola` | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
+| `g03-grafica` | enp0s3 | 10.0.0.15/24 | enp0s8 | 192.168.56.102/24 |
+| `g03-consola` | enp0s3 | 10.0.0.15/24 | enp0s8 | 192.168.56.101/24 |
 
-**Configuración adicional:** [Indicar si las direcciones IP se asignaron automáticamente mediante DHCP o si fue necesario configurar alguna interfaz manualmente.]
 
 ### 3.3. Comandos de verificación
 
@@ -220,18 +219,20 @@ ip a
 Para comprobar la conectividad entre las máquinas virtuales se ejecutó:
 
 ```bash
-ping -c 4 <IP-HOST-ONLY-DE-LA-OTRA-VM>
+ping -c 4 192.168.56.101
+y
+ping -c 4 192.168.56.102
 ```
 
 ### 3.4. Evidencias gráficas
 
-![ip a en las dos VMs](capturas-vm/s1-06-ip-a.png)
+![ip a en las dos VMs](capturas-vm/ip%20a.png)
 
 *Figura 16. Salida del comando `ip a` en ambas máquinas virtuales. Se identifican las interfaces de red y las direcciones IP asignadas a los adaptadores NAT y Host-Only.*
 
 **Descripción de la evidencia:** La captura permite verificar el direccionamiento IP de las dos máquinas virtuales y distinguir las interfaces destinadas al acceso a internet y a la comunicación interna.
 
-![Ping de la gráfica a la consola y de la consola a la gráfica](capturas-vm/s1-07-ping.png)
+![Ping de la gráfica a la consola y de la consola a la gráfica](capturas-vm/ping.png)
 
 *Figura 17. Pruebas de conectividad mediante `ping` en ambos sentidos: desde `g03-grafica` hacia `g03-consola` y desde `g03-consola` hacia `g03-grafica`.*
 
@@ -251,19 +252,19 @@ La conexión se realizó utilizando el usuario principal de Ubuntu Server y la d
 |:---|:---|
 | Máquina de origen | `g03-grafica` |
 | Máquina de destino | `g03-consola` |
-| Usuario remoto | [COMPLETAR] |
-| Dirección IP de destino | [COMPLETAR] |
+| Usuario remoto | g03 |
+| Dirección IP de destino | 192.168.56.101 |
 | Puerto SSH | 22 |
 
 ### 4.2. Comando de conexión
 
 ```bash
-ssh usuario@direccion-ip-de-la-consola
+ssh g03@192.168.56.101
 ```
 
 ### 4.3. Evidencia gráfica
 
-![Sesión SSH abierta, con el prompt de la consola](capturas-vm/s1-08-ssh.png)
+![Sesión SSH abierta, con el prompt de la consola](capturas-vm/ssh_abierta.png)
 
 *Figura 18. Sesión SSH establecida desde `g03-grafica` hacia `g03-consola`, mostrando el acceso remoto y el prompt del usuario de Ubuntu Server.*
 
