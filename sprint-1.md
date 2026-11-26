@@ -280,7 +280,7 @@ Las instantáneas se registraron con el nombre `instalacion-limpia` y se realiza
 
 ### 5.1. Instantánea de la máquina gráfica
 
-![Pestaña de instantáneas de g03-grafica](capturas-vm/s1-09-instantanea-grafica.png)
+![Pestaña de instantáneas de g03-grafica](capturas-vm/instantanea_grafica.png)
 
 *Figura 19. Instantánea `instalacion-limpia` registrada para la máquina virtual `g03-grafica`.*
 
@@ -288,7 +288,7 @@ Las instantáneas se registraron con el nombre `instalacion-limpia` y se realiza
 
 ### 5.2. Instantánea de la máquina de consola
 
-![Pestaña de instantáneas de g03-consola](capturas-vm/s1-10-instantanea-consola.png)
+![Pestaña de instantáneas de g03-consola](capturas-vm/instantanea_consola.png)
 
 *Figura 20. Instantánea `instalacion-limpia` registrada para la máquina virtual `g03-consola`.*
 
