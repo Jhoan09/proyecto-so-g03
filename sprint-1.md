@@ -337,7 +337,7 @@ El video debe evidenciar:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FKhjmluvp54" title="Sprint 1 - Montaje de infraestructura" frameborder="0" allowfullscreen></iframe>
 
-**Enlace del video:** https://www.youtube.com/embed/FKhjmluvp54
+**Enlace del video:** [https://youtu.be/FKhjmluvp54](https://youtu.be/FKhjmluvp54)
 
 ---
 
