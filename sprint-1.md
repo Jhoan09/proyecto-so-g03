@@ -376,7 +376,7 @@ Durante el montaje se deben registrar los inconvenientes técnicos que se presen
 | Instalación y verificación de herramientas | COMPLETADO |
 | Configuración de adaptadores NAT y Host-Only | COMPLETADO |
 | Conectividad bidireccional mediante ping | COMPLETADO |
-| Acceso remoto mediante SSH | [COMPLETADO |
+| Acceso remoto mediante SSH | COMPLETADO |
 | Instantánea `instalacion-limpia` en ambas máquinas | COMPLETADO |
 | Archivo `codigo_sprint1.txt` en ambos `$HOME` | COMPLETADO |
 | Mínimo 2 commits por integrante | PENDIENTE |
