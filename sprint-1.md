@@ -335,9 +335,9 @@ El video debe evidenciar:
 
 ### Reproducción del video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ID_DEL_VIDEO" title="Sprint 1 - Montaje de infraestructura" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtu.be/FKhjmluvp54" title="Sprint 1 - Montaje de infraestructura" frameborder="0" allowfullscreen></iframe>
 
-**Enlace del video:** [COMPLETAR CON EL ENLACE DE YOUTUBE]
+**Enlace del video:** https://youtu.be/FKhjmluvp54
 
 ---
 
