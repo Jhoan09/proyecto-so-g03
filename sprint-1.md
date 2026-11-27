@@ -379,8 +379,8 @@ Durante el montaje se deben registrar los inconvenientes técnicos que se presen
 | Acceso remoto mediante SSH | COMPLETADO |
 | Instantánea `instalacion-limpia` en ambas máquinas | COMPLETADO |
 | Archivo `codigo_sprint1.txt` en ambos `$HOME` | PENDIENTE |
-| Mínimo 2 commits por integrante | PENDIENTE |
-| Video continuo de 3 minutos | PENDIENTE |
+| Mínimo 2 commits por integrante | COMPLETADO |
+| Video continuo de 3 minutos | COMPLETADO |
 
 ---
 
