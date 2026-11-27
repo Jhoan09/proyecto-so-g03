@@ -370,17 +370,17 @@ Durante el montaje se deben registrar los inconvenientes técnicos que se presen
 
 | Requisito | Estado |
 |:---|:---|
-| Instalación de Fedora Workstation 45 | [COMPLETAR] |
-| Instalación de Ubuntu Server 26.04 LTS | [COMPLETAR] |
-| Particionado manual de ambas máquinas | [COMPLETAR] |
-| Instalación y verificación de herramientas | [COMPLETAR] |
-| Configuración de adaptadores NAT y Host-Only | [COMPLETAR] |
-| Conectividad bidireccional mediante ping | [COMPLETAR] |
-| Acceso remoto mediante SSH | [COMPLETAR] |
-| Instantánea `instalacion-limpia` en ambas máquinas | [COMPLETAR] |
-| Archivo `codigo_sprint1.txt` en ambos `$HOME` | [COMPLETAR] |
-| Mínimo 2 commits por integrante | [COMPLETAR] |
-| Video continuo de 3 minutos | [COMPLETAR] |
+| Instalación de Fedora Workstation 45 | COMPLETADO |
+| Instalación de Ubuntu Server 26.04 LTS | COMPLETADO |
+| Particionado manual de ambas máquinas | COMPLETADO |
+| Instalación y verificación de herramientas | COMPLETADO |
+| Configuración de adaptadores NAT y Host-Only | COMPLETADO |
+| Conectividad bidireccional mediante ping | COMPLETADO |
+| Acceso remoto mediante SSH | [COMPLETADO |
+| Instantánea `instalacion-limpia` en ambas máquinas | COMPLETADO |
+| Archivo `codigo_sprint1.txt` en ambos `$HOME` | COMPLETADO |
+| Mínimo 2 commits por integrante | PENDIENTE |
+| Video continuo de 3 minutos | PENDIENTE |
 
 ---
 
